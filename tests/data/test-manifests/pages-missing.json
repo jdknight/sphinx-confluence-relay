@@ -1,0 +1,23 @@
+{
+    "type": "SphinxConfluenceBuilder/Manifest",
+    "spec": 1,
+    "language": "en",
+    "includesData": true,
+    "attachments": [
+        {
+            "id": "af6a4603e039cca2f6823d287f6c87e561aa6e68.png",
+            "pageId": "second",
+            "pageTitle": "Second Page",
+            "mimeType": "image/png",
+            "hash": {
+                "sha256": "4a711f5cd03c09fd79ae2f19bb2f71168e71c18b7562626a1ae8d99ebc3212ff"
+            },
+            "path": "../doctrees/images/embeded/af6a4603e039cca2f6823d287f6c87e561aa6e68.png",
+            "data": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+        }
+    ],
+    "confluencebuilderVersion": "3.1.0",
+    "sphinxVersion": "9.1.0",
+    "docutilsVersion": "0.22.4",
+    "generated": "2026-07-15T00:52:55.092080+00:00"
+}

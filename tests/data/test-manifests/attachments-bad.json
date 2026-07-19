@@ -1,0 +1,34 @@
+{
+    "type": "SphinxConfluenceBuilder/Manifest",
+    "spec": 1,
+    "language": "en",
+    "includesData": true,
+    "pages": [
+        {
+            "id": "index",
+            "title": "Test Project",
+            "isRoot": true,
+            "hash": {
+                "sha256": "0eb22ecf6416d01989b4952eff974bdf45957bbead62cebfd5f6a2921c974f03"
+            },
+            "path": "index.conf",
+            "data": "PHVsPgo8bGk+CjxhYzpsaW5rPgo8cmk6cGFnZSByaTpjb250ZW50LXRpdGxlPSJTZWNvbmQgUGFnZSIgLz4KPGFjOmxpbmstYm9keT5TZWNvbmQgUGFnZTwvYWM6bGluay1ib2R5Pgo8L2FjOmxpbms+PC9saT4KPC91bD4K"
+        },
+        {
+            "id": "second",
+            "title": "Second Page",
+            "parentId": "index",
+            "parentTitle": "Test Project",
+            "hash": {
+                "sha256": "6ccf306cfdd4d7c6191de197528ad0fdebb90aff68f2cc7971585bfad8916198"
+            },
+            "path": "second.conf",
+            "data": "PGFjOmltYWdlIGFjOmFsaWduPSJjZW50ZXIiIGFjOmFsdD0iTXkgRW1iZWRkZWQgQmFzZTY0IFJlZCBEb3QiPgo8cmk6YXR0YWNobWVudCByaTpmaWxlbmFtZT0iYWY2YTQ2MDNlMDM5Y2NhMmY2ODIzZDI4N2Y2Yzg3ZTU2MWFhNmU2OC5wbmciPjwvcmk6YXR0YWNobWVudD4KPC9hYzppbWFnZT4="
+        }
+    ],
+    "attachments": false,
+    "confluencebuilderVersion": "3.1.0",
+    "sphinxVersion": "9.1.0",
+    "docutilsVersion": "0.22.4",
+    "generated": "2026-07-15T00:52:55.092080+00:00"
+}

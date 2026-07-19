@@ -1,0 +1,46 @@
+{
+    "type": "SphinxConfluenceBuilder/Manifest",
+    "spec": 1,
+    "language": "en",
+    "includesData": true,
+    "pages": [
+        {
+            "id": "index",
+            "title": true,
+            "isRoot": true,
+            "hash": {
+                "sha256": "0eb22ecf6416d01989b4952eff974bdf45957bbead62cebfd5f6a2921c974f03"
+            },
+            "path": "index.conf",
+            "data": "PHVsPgo8bGk+CjxhYzpsaW5rPgo8cmk6cGFnZSByaTpjb250ZW50LXRpdGxlPSJTZWNvbmQgUGFnZSIgLz4KPGFjOmxpbmstYm9keT5TZWNvbmQgUGFnZTwvYWM6bGluay1ib2R5Pgo8L2FjOmxpbms+PC9saT4KPC91bD4K"
+        },
+        {
+            "id": "second",
+            "title": "Second Page",
+            "parentId": "index",
+            "parentTitle": "Test Project",
+            "hash": {
+                "sha256": "6ccf306cfdd4d7c6191de197528ad0fdebb90aff68f2cc7971585bfad8916198"
+            },
+            "path": "second.conf",
+            "data": "PGFjOmltYWdlIGFjOmFsaWduPSJjZW50ZXIiIGFjOmFsdD0iTXkgRW1iZWRkZWQgQmFzZTY0IFJlZCBEb3QiPgo8cmk6YXR0YWNobWVudCByaTpmaWxlbmFtZT0iYWY2YTQ2MDNlMDM5Y2NhMmY2ODIzZDI4N2Y2Yzg3ZTU2MWFhNmU2OC5wbmciPjwvcmk6YXR0YWNobWVudD4KPC9hYzppbWFnZT4="
+        }
+    ],
+    "attachments": [
+        {
+            "id": "af6a4603e039cca2f6823d287f6c87e561aa6e68.png",
+            "pageId": "second",
+            "pageTitle": "Second Page",
+            "mimeType": "image/png",
+            "hash": {
+                "sha256": "4a711f5cd03c09fd79ae2f19bb2f71168e71c18b7562626a1ae8d99ebc3212ff"
+            },
+            "path": "../doctrees/images/embeded/af6a4603e039cca2f6823d287f6c87e561aa6e68.png",
+            "data": "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+        }
+    ],
+    "confluencebuilderVersion": "3.1.0",
+    "sphinxVersion": "9.1.0",
+    "docutilsVersion": "0.22.4",
+    "generated": "2026-07-15T00:52:55.092080+00:00"
+}

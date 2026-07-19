@@ -1,0 +1,8 @@
+[sphinx-confluence-relay]
+confluence-url = 'http://wiki.example.com'
+confluence-token = 'dummy'
+spaces = [
+    'space-a',
+    false,
+    'space-c',
+]

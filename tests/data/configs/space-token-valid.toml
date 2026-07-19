@@ -1,0 +1,7 @@
+[sphinx-confluence-relay]
+confluence-url = 'http://wiki.example.com'
+confluence-token = 'dummy'
+
+[[sphinx-confluence-relay-space]]
+space = 'TEST'
+publish-token = 'TOKEN'

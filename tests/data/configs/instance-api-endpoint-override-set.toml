@@ -1,0 +1,4 @@
+[[gitlab-schedule-badge-instance]]
+url = 'https://git.example.com/'
+token = 'glpat-value'
+api-endpoint-override = 'dummy'

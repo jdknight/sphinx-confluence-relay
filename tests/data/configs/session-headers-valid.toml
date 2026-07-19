@@ -1,0 +1,7 @@
+[sphinx-confluence-relay]
+confluence-url = 'http://wiki.example.com'
+confluence-token = 'dummy'
+session-headers = [
+    { name = 'SESSION_ID', value = 'DuMmYa' },
+    { name = 'U_ID', value = 'DuMmYb' },
+]

@@ -1,0 +1,3 @@
+[sphinx-confluence-relay]
+confluence-url = 'https://wiki.example.com'
+confluence-token = 'dummy'
