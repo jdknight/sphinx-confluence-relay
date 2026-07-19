@@ -1,0 +1,29 @@
+# building
+/*.egg-info/
+/.eggs/
+/.pybuild/
+/build/
+/dist/
+
+# 'git format-patch' folder
+/outgoing/
+
+# python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+
+# databases
+database*.db
+
+# settings
+sphinx-confluence-relay.toml
+
+# testing
+/htmlcov*/
+/.tox/
+.coverage*
+!.coveragerc
+
+# other
+/.idea/
