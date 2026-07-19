@@ -1,0 +1,13 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.scr-banner {
+    background-color: #202020;
+    color: #ffffff;
+    font-size: .7em;
+    line-height: .9rem;
+    text-align: center;
+}
