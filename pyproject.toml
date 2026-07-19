@@ -1,0 +1,43 @@
+[build-system]
+requires = [
+    'flit_core >=3.11,<4',
+]
+build-backend = 'flit_core.buildapi'
+
+[project]
+name = 'sphinx-confluence-relay'
+description = 'Publish service for Confluence Sphinx Documentation Manifests'
+requires-python = '>=3.11'
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Environment :: Web Environment',
+    'Framework :: FastAPI',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
+    'Topic :: Documentation',
+    'Topic :: Documentation :: Sphinx',
+]
+dependencies = [
+    'apscheduler',
+    'fastapi[standard]',
+    'sqlmodel',
+]
+dynamic = [
+    'version',
+]
+
+[project.scripts]
+sphinx-confluence-relay-publish = 'sphinx_confluence_relay.__main__:main'
+
+[project.urls]
+Download = 'https://pypi.python.org/pypi/sphinx-confluence-relay'
+Source = 'https://github.com/jdknight/sphinx-confluence-relay'
+
+[tool.flit.sdist]
+include = [
+    'sphinx-confluence-relay.toml.default',
+]
