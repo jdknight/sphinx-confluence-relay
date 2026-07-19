@@ -8,6 +8,7 @@ build-backend = 'flit_core.buildapi'
 name = 'sphinx-confluence-relay'
 description = 'Publish service for Confluence Sphinx Documentation Manifests'
 requires-python = '>=3.11'
+readme = 'README.md'
 classifiers = [
     'Development Status :: 3 - Alpha',
     'Environment :: Web Environment',
