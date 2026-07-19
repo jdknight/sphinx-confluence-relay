@@ -106,7 +106,7 @@ sphinx-confluence-relay.toml
 /etc/sphinx-confluence-relay.toml  (non-Windows)
 ```
 
-A bare minimum configuration required is the configuration of the Confluence
+The bare minimum configuration required is the configuration of the Confluence
 Data Center API URL and the token that will be used for REST interaction:
 
 ```toml
@@ -138,7 +138,7 @@ For additional advanced options, refer to the template configuration.
 
 ## Manual Service Setup
 
-System administrators may manually setup using the following instructions.
+System administrators may manually set up using the following instructions.
 Adjusts paths to desired preferences.
 
 Build a path to hold packages:
@@ -161,7 +161,7 @@ Install this service using [pip][pip]:
 pip install sphinx-confluence-relay
 ```
 
-Place the prepare configuration file in the local directory with the name:
+Place the prepared configuration file in the local directory with the name:
 
 ```none
 sphinx-confluence-relay.toml
@@ -187,7 +187,7 @@ A pre-built image can be acquired using the following command:
 docker pull ghcr.io/jdknight/sphinx-confluence-relay
 ```
 
-On the host what will run Docker, copy the configuration file into this path:
+On the host that will run Docker, copy the configuration file into this path:
 
 ```none
 /etc/sphinx-confluence-relay.toml
@@ -200,7 +200,7 @@ status information:
 /var/lib/sphinx-confluence-relay/
 ```
 
-The container than can be run using the following command:
+The container then can be run using the following command:
 
 ```none
 docker run --name sphinx-confluence-relay --detach --restart unless-stopped \
