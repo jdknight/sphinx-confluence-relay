@@ -28,6 +28,7 @@ from typing import TYPE_CHECKING
 from typing import cast
 import asyncio
 import httpx
+import ssl
 
 if TYPE_CHECKING:
     from sphinx_confluence_relay.state import AppState
@@ -93,10 +94,19 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         'X-Atlassian-Token': 'no-check',
     }
 
+    # setup ssl context
+    ssl_context = ssl.create_default_context()
+    if app.state.settings.ca_certificate:
+        ssl_context.load_verify_locations(
+            cafile=app.state.settings.ca_certificate)
+    elif app.state.settings.ignore_tls:
+        ssl_context = False  # type: ignore[assignment]
+
     async with httpx.AsyncClient(
                 headers=headers,
                 limits=limits,
                 timeout=timeout,
+                verify=ssl_context,
             ) as client:
         app.state.http_client = client
 
