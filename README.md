@@ -204,8 +204,9 @@ The container than can be run using the following command:
 
 ```none
 docker run --name sphinx-confluence-relay --detach --restart unless-stopped \
-    /etc/sphinx-confluence-relay.toml:/etc/sphinx-confluence-relay.toml:ro \
-    /var/lib/sphinx-confluence-relay/:/database.db \
+    -p 8080:8080 \
+    -v /etc/sphinx-confluence-relay.toml:/etc/sphinx-confluence-relay.toml:ro \
+    -v /var/lib/sphinx-confluence-relay/:/database.db \
     ghcr.io/jdknight/sphinx-confluence-relay
 ```
 
