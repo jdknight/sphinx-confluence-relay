@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# Copyright jdknight
+
+name: sphinx-confluence-relay
+services:
+  sphinx-confluence-relay:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      # SPHINX_CONFLUENCE_RELAY_LOG_LEVEL: "debug"
+      TZ: "America/New_York"
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      # configuration
+      - ./sphinx-confluence-relay.toml:/etc/sphinx-confluence-relay.toml:ro
+      # database for queued requests and statuses
+      - ./database.db:/database.db

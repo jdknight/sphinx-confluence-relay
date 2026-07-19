@@ -1,0 +1,13 @@
+# ignore everything
+*
+
+# explicit list to move into context
+!docker/
+!sphinx_confluence_relay/
+!LICENSE
+!pyproject.toml
+!README.md
+
+# re-apply ignores on specific files
+**/__pycache__
+**/sphinx-confluence-relay.toml
