@@ -1,0 +1,62 @@
+[sphinx-confluence-relay]
+# The URL of the Confluence instance to query including the API endpoint.
+# Only Confluence Data Center editions supported.
+confluence-url = 'https://wiki.example.com/rest/api/'
+
+# The token to use when authenticating with this relay node and the
+# Confluence instance.
+confluence-token = ''
+
+# The timeout to apply for connection REST requests to Confluence instances.
+# The default value for this is five (5) seconds.
+#timeout = 5
+
+# Disable users the ability to drop pending requests.
+#drop-restricted = true
+
+# The size limit (in megabytes; MB) check for received manifest files.
+# The default value for this is twenty (20) seconds.
+#size-limit = 20
+
+# Configure the hostname for the instance. Optional, unless running a
+# reverse proxy to ensure sources use an appropriate hostname.
+#server-name = <hostname>:<port>
+
+# Include a custom banner at the top of the homepage.
+#banner = 'This is a banner!'
+
+# Authentication tokens needed for generating publish requests from users to
+# this relay service.
+# (ignore for spaces which define explicit token requirements)
+#publish-tokens = [
+#   '',
+#]
+
+# The space(s) allowed to be updated. If no spaces are listed, it will
+# assume any space accessible with the authorization key is permitted.
+# spaces = [
+#   '',
+# ]
+
+# The CA certificate to use when communicating with Confluence.
+#ca-certificate = 'my.crt'
+
+# (NOTE: using this option is not recommended)
+# Ignore all TLS certificate checks when communicating with Confluence.
+#ignore-tls = true
+
+# HTTP(S) headers to apply when communicating with this instance. This is
+# mainly to support additional authentication layers required for a Confluence
+# target.
+#session-headers = [
+#    { name = 'SESSION_ID', value = 'VALUE' },
+#    { name = 'U_ID', value = 'VALUE' },
+#]
+
+[[sphinx-confluence-relay-space]]
+# Space key to bind a specific authorization token to.
+#space = ''
+
+# Explicit authentication tokens needed for publish requests from users to
+# this relay service for a specific space.
+#publish-token = ''
