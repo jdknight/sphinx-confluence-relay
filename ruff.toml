@@ -1,0 +1,62 @@
+lint.select = [
+    'ALL',
+]
+
+lint.ignore = [
+    # ignore complexity hints
+    'C90',
+    'PLR',
+    # ignore pydocstyle
+    'D',
+    # imports are sorted lexicographically in this project
+    'FBT002',
+    'I001',
+    # prefer f-string over more efficient approach
+    'G004',
+    # project uses unittest module
+    'PT',
+    # single quotes are preferred in this project
+    'Q000',
+    'Q001',
+    'Q002',
+    # use of asserts are desired
+    'S101',
+]
+
+lint.logger-objects = [
+    'sphinx_confluence_relay.logger.logger',
+]
+
+[lint.per-file-ignores]
+'sphinx_confluence_relay/__main__.py' = [
+    # tailor system exit prints
+    'B904',
+    # expected prints
+    'T201',
+]
+
+'sphinx_confluence_relay/settings.py' = [
+    # tailored exception scenarios for clean output
+    'TRY400',
+]
+
+'sphinx_confluence_relay/routes.py' = [
+    # ignore flags related to FastAPI handles dependency injection
+    'B008',
+]
+
+'sphinx_confluence_relay/validate.py' = [
+    # desire error over exception to not spam on unavailabity scenarios
+    'TRY400',
+]
+
+'tests/__init__.py' = [
+    # ignore use of nested with statements as it makes it easier to
+    # read without exceeding a long line length
+    'SIM117',
+]
+
+'tests/test_queuing.py' = [
+    # ignore unit test "security" tokens
+    'S105',
+]

@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+exec tox -e ruff,mypy,pylint "$@"
