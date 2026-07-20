@@ -43,11 +43,27 @@ pipx install sphinx-confluence-relay
 ```
 
 Which will provide a `sphinx-confluence-relay-publish` command to publish a
-manifest generated from a local Confluence run. For example:
+manifest generated from a documentation build event. For example, after
+generating documentation using a command similar to:
 
 ```
 sphinx-build -M confluence . _build -E -a
+```
+
+A user can publish the manifest by using the command:
+
+```
 sphinx-confluence-relay-publish http://upload.wiki.example.com/ --space-key MYSPACE --parent-page MyPublishDocs
+```
+
+Or:
+
+```
+export SPHINX_CONFLUENCE_RELAY_PUBLISH_PARENT=MyPublishDocs
+export SPHINX_CONFLUENCE_RELAY_PUBLISH_SPACE=MYSPACE
+export SPHINX_CONFLUENCE_RELAY_PUBLISH_URL=http://upload.wiki.example.com/
+
+sphinx-confluence-relay-publish
 ```
 
 <hr />

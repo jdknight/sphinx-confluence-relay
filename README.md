@@ -54,6 +54,14 @@ For example:
 sphinx-confluence-relay-publish http://upload.wiki.example.com/ --space-key MYSPACE --parent-page Documentation
 ```
 
+Command line options can be replaced using respective environment options:
+
+```
+SPHINX_CONFLUENCE_RELAY_PUBLISH_PARENT
+SPHINX_CONFLUENCE_RELAY_PUBLISH_SPACE
+SPHINX_CONFLUENCE_RELAY_PUBLISH_URL
+```
+
 If a manifest file is not provided via the `--manifest` argument, the default
 paths searched for will be:
 

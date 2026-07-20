@@ -33,6 +33,7 @@ def main() -> None:
 
     parser.add_argument(
         'url',
+        nargs='?',
         help='url of the publish service to send a manifest to',
     )
     parser.add_argument(
@@ -47,7 +48,6 @@ def main() -> None:
     )
     parser.add_argument(
         '--parent-page',
-        required=True,
         help='parent page to publish into',
     )
     parser.add_argument(
@@ -57,7 +57,6 @@ def main() -> None:
     )
     parser.add_argument(
         '--space-key',
-        required=True,
         help='space to publish to',
     )
     parser.add_argument(
@@ -72,9 +71,42 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    # verify the url is something sane
-    service_url = args.url.strip('/')
+    # verify url is provided
+    service_url = args.url
 
+    if not service_url:
+        service_url = os.getenv('SPHINX_CONFLUENCE_RELAY_PUBLISH_URL', '')
+
+    service_url = service_url.strip('/')
+
+    if not service_url:
+        msg = 'url is required'
+        raise SystemExit(msg)
+
+    # verify space is provided
+    space_key = args.space_key
+    if not space_key:
+        space_key = os.getenv('SPHINX_CONFLUENCE_RELAY_PUBLISH_SPACE', '')
+
+    space_key = space_key.strip().upper()
+
+    if not space_key:
+        msg = 'space key not provided'
+        raise SystemExit(msg)
+
+    # verify parent page is provided
+    parent_page = args.parent_page
+
+    if not parent_page:
+        parent_page = os.getenv('SPHINX_CONFLUENCE_RELAY_PUBLISH_PARENT', '')
+
+    parent_page = parent_page.strip()
+
+    if not parent_page:
+        msg = 'parent page not provided'
+        raise SystemExit(msg)
+
+    # verify the url is something sane
     try:
         parsed_server_name = urlparse(service_url)
     except ValueError:
@@ -137,16 +169,6 @@ def main() -> None:
 
     if not parsed_data.get('includesData'):
         msg = 'manifest does not include data (required)'
-        raise SystemExit(msg)
-
-    space_key = args.space_key.strip().upper()
-    if not space_key:
-        msg = 'space key not provided'
-        raise SystemExit(msg)
-
-    parent_page = args.parent_page.strip()
-    if not parent_page:
-        msg = 'parent page not provided'
         raise SystemExit(msg)
 
     if args.token:
