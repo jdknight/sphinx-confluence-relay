@@ -10,9 +10,11 @@ Note that this service only supports Confluence Data Center.
 ## Usage
 
 When running Sphinx, ensure [`confluence_publish`][confluence_publish] is
-disabled to avoid attempts to publish with the extension. In addition,
-configure [`confluence_manifest_data`][confluence_manifest_data] to
+disabled (default state) to avoid attempts to publish with the extension. In
+addition, configure [`confluence_manifest_data`][confluence_manifest_data] to
 generate full manifest definition.
+
+For example:
 
 ```
 confluence_publish = False
@@ -26,7 +28,7 @@ scb-manifest.json
 ```
 
 This file can be used in the publish request provided by this service. Provide
-at least the space name and this manifest, the service will queue and
+the space key, parent page and this manifest; this service will queue and
 eventually publish queue pages/files. After queuing the publish request, it
 may take a moment to publish. A user can query the status of a recently
 generated request using the request identifier returned when the request
