@@ -7,10 +7,12 @@
 
 The project provides the ability to create a "relay" service that accepts
 generated manifest files from
-[Atlassian Confluence Builder for Sphinx][confluencebuilder] and publish
-them to a pre-configured Confluence Data Center instance (Confluence Cloud
-is not supported). Using such a service allows system administrators to setup
-publish relaying where users do not need to expose their Confluence tokens.
+[Atlassian Confluence Builder for Sphinx][confluencebuilder]
+([GitHub][confluencebuilder-github]), powered by [Sphinx][sphinx]
+([GitHub][sphinx-github]), and publish them to a pre-configured Confluence
+Data Center instance (Confluence Cloud is not supported). Using such a service
+allows system administrators to setup publish relaying where users do not need
+to expose their Confluence tokens.
 
 ## Requirements
 
@@ -264,9 +266,12 @@ docker compose up --detach
 
 [apscheduler]: https://apscheduler.readthedocs.io/
 [confluence-manifest-data]: https://sphinxcontrib-confluencebuilder.readthedocs.io/configuration/#confval-confluence_manifest_data
+[confluencebuilder-github]: https://github.com/sphinx-contrib/confluencebuilder
 [confluencebuilder]: https://sphinxcontrib-confluencebuilder.readthedocs.io/
 [curl]: https://curl.se/
 [fastapi]: https://fastapi.tiangolo.com/
 [pip]: https://pip.pypa.io/
 [python]: https://www.python.org/
+[sphinx-github]: https://github.com/sphinx-doc/sphinx
+[sphinx]: https://www.sphinx-doc.org/
 [sqlmodel]: https://sqlmodel.tiangolo.com/
