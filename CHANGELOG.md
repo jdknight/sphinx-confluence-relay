@@ -1,4 +1,4 @@
-# Development
+# 0.2.0 (2026-07-20)
 
 - Allow `sphinx-confluence-relay-publish` to accept environment options
 
