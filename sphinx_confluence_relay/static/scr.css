@@ -3,6 +3,10 @@ body {
     padding: 0 !important;
 }
 
+#swagger-ui {
+    margin: 0 auto;
+    max-width: 1000px;
+}
 
 .scr-banner {
     background-color: #202020;
